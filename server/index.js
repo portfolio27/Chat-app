@@ -27,7 +27,15 @@ app.use(require('./routes/auth.js'))
 app.use(require('./routes/contact.js'))
 app.use(require('./routes/addContact.js'))
 app.use(require('./routes/chat.js'))
-  
+
+app.use('/', (req, res)=> {
+    res.send("hii there")
+})
+
+app.use('/about', (req, res)=> {
+    res.send("hii there from about")
+})
+
 const users = {};
   
 io.on("connection", (socket) => {
