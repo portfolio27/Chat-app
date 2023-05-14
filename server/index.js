@@ -21,6 +21,7 @@ dotenv.config();
 app.use(express.json())
 app.use(cors());
 
+const PORT = process.env.PORT;
 
 app.use(require('./routes/auth.js'))
 app.use(require('./routes/contact.js'))
@@ -67,5 +68,5 @@ mongoose.connect(process.env.MONGODB,
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    .then( ()=> {server.listen(5000, ()=> {console.log('Server hosted')})})
+    .then( ()=> {server.listen(PORT, ()=> {console.log('Server hosted')})})
     .catch( (err) => {console.log(err)})
