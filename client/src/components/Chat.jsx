@@ -10,7 +10,7 @@ const Chat = ({userId, destinationUserId, chatId}) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("https://chat-app-backend-zeta.vercel.app/"));
+    setSocket(io("https://chat-app-backend-zeta.vercel.app"));
     getChats();
   }, []);
 
