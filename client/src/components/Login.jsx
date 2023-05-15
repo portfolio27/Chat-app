@@ -35,11 +35,12 @@ const Login = (props) => {
         })  
 
         const data = await response.json();
+        console.log(data);
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', data.message._id);
         localStorage.setItem('userId', data.message.userId)
 
-        const contactResponse = await fetch('/contact', {
+        const contactResponse = await fetch('https://chat-app-backend-zeta.vercel.app/contact', {
             method: "POST",
             headers: {
                 'Content-Type': "application/json",
