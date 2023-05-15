@@ -22,7 +22,7 @@ const Contact =  (props) => {
     }, [])
 
     const getContact = async () => {
-        const response = await fetch('/get-contact', {
+        const response = await fetch('https://chat-app-backend-zeta.vercel.app/get-contact', {
             method: "POST",
             headers: {
                 'Content-Type': "application/json",
