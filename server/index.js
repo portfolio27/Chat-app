@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server, {
     cors: {
-      origin: "*",
+      origin: "https://chat-app-neon-rho.vercel.app/",
       methods: ["GET", "POST"],
     },
   });
