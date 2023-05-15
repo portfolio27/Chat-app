@@ -23,7 +23,7 @@ const Login = (props) => {
 
     const login = async (e) => {
         e.preventDefault();
-        const response = await fetch('/auth/login', {
+        const response = await fetch('https://chat-app-backend-zeta.vercel.app/auth/login', {
             method: "POST",
             headers: {
                 'Content-type': "application/json"
