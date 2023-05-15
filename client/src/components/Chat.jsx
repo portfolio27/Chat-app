@@ -21,7 +21,7 @@ const Chat = ({userId, destinationUserId, chatId}) => {
   }, [chatId])
 
   const getChats = async () => {
-    const response = await fetch('/get-chat', {
+    const response = await fetch('https://chat-app-backend-zeta.vercel.app/get-chat', {
       method: "POST",
       headers: {
           'Content-Type': "application/json",
@@ -37,7 +37,7 @@ const Chat = ({userId, destinationUserId, chatId}) => {
   }
 
   const sendMessageUser = async () => {
-    const response = await fetch('/chat', {
+    const response = await fetch('https://chat-app-backend-zeta.vercel.app/chat', {
       method: "POST",
       headers: {
           'Content-Type': "application/json",
