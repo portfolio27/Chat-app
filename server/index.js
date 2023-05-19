@@ -9,14 +9,8 @@ const { log } = require('console');
 
 const app = express();
 const server = http.createServer(app);
-const io = require("socket.io")(server, {
-    cors: {
-      origin: "http://localhost:3000/",
-      credentials: true,
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
-    },
-  });
+const io = require("socket.io")(server);
+io.origins('*:*') 
 
 // Configure
 dotenv.config();
